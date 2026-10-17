@@ -1,0 +1,226 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #111111;
+    color: #eaeaea;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 5%;
+    
+    
+    background: linear-gradient(
+        90deg,
+        rgba(101, 9, 9, 0.5),
+        rgba(37, 16, 16, 0.5)
+    );
+    
+}
+
+.logo {
+    width: 35px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #eaeaea;
+    text-decoration: none;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ff5555;
+}
+
+main {
+    padding: 0;
+    min-height: auto;
+}
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    width: 100%;
+    min-height: 650px;
+}
+
+.gradient-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.gradient-blob {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+
+    filter: blur(120px);
+    opacity: 0.75;
+
+    transform: translate(-50%, -50%);
+    will-change: left, top;
+    pointer-events: none;
+}
+
+.blob1 {
+    background: #b00012;
+}
+
+.blob2 {
+    background: #6e1018;
+}
+
+.blob3 {
+    background: #8b0000;
+}
+
+.blob4 {
+    background: #451010;
+}
+
+.blob5 {
+    background: #8b0000;
+}
+
+
+@media (max-width: 650px) {
+    .gradient-blob {
+        width: 280px;
+        height: 280px;
+        filter: blur(90px);
+    }
+}
+
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 220px 5% 70px;
+    pointer-events: none;
+}
+
+.hero h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.1;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1920px;
+}
+
+.hero-actions p {
+    font-size: 18px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #681616;
+    color: #eaeaea;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    white-space: nowrap;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a51c27;
+}
+
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+footer {
+    text-align: left;
+    padding: 25px 5%;
+    background: linear-gradient(90deg, #650909, #251010);
+}
+
+/* For Phone */
+
+@media (max-width: 650px) {
+    header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-content {
+        padding: 120px 6% 60px;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gradient-blob {
+        width: 280px;
+        height: 280px;
+        filter: blur(65px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gradient-blob {
+        will-change: auto;
+    }
+}

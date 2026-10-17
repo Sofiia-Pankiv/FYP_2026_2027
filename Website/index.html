@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Poster Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+       <img src="assets/logo.png" alt="logo" class="logo">
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#create">Create</a>
+            <a href="#randomise">Randomise</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <section class="hero" id="hero">
+
+            <!-- Interactive gradient background -->
+            <div class="gradient-bg" id="gradientBg" aria-hidden="true">
+                <div class="gradient-blob blob1"></div>
+                <div class="gradient-blob blob2"></div>
+                <div class="gradient-blob blob3"></div>
+                <div class="gradient-blob blob4"></div>
+            </div>
+
+            <!-- Content above the gradient -->
+            <div class="hero-content">
+
+                <h1>Interactive Poster<br>Generator</h1>
+
+                <div class="hero-actions">
+                    <p>Create Your Own Inspiration</p>
+
+                    <button id="startButton">
+                        Download the Figma Plugin
+                    </button>
+                </div>
+
+                <p id="message" aria-live="polite"></p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>Contact us</p>
+    </footer>
+
+</body>
+</html>
